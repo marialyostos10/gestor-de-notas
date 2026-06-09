@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Notas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1>📝 Gestor de Notas</h1>
+                <button id="themeToggle" class="theme-toggle">🌙</button>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Panel de Carpetas -->
+            <aside class="folders-panel">
+                <div class="folders-header">
+                    <h2>Carpetas</h2>
+                    <button id="addFolderBtn" class="btn-add" title="Agregar carpeta">➕</button>
+                </div>
+                <div id="foldersList" class="folders-list"></div>
+            </aside>
+
+            <!-- Panel de Notas -->
+            <section class="notes-section">
+                <div class="notes-header">
+                    <div>
+                        <h2 id="currentFolderName">Selecciona una carpeta</h2>
+                        <p id="noteCount" class="note-count"></p>
+                    </div>
+                    <button id="addNoteBtn" class="btn-add-note" title="Agregar nota">➕ Nueva Nota</button>
+                </div>
+                <div id="notesList" class="notes-list"></div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal para agregar/editar carpeta -->
+    <div id="folderModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="folderModalTitle">Nueva Carpeta</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <input type="text" id="folderNameInput" placeholder="Nombre de la carpeta" maxlength="30">
+            </div>
+            <div class="modal-footer">
+                <button id="cancelFolderBtn" class="btn btn-secondary">Cancelar</button>
+                <button id="saveFolderBtn" class="btn btn-primary">Guardar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para agregar/editar nota -->
+    <div id="noteModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="noteModalTitle">Nueva Nota</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <input type="text" id="noteTitleInput" placeholder="Título de la nota" maxlength="50">
+                <textarea id="noteContentInput" placeholder="Escribe tu nota aquí..."></textarea>
+            </div>
+            <div class="modal-footer">
+                <button id="cancelNoteBtn" class="btn btn-secondary">Cancelar</button>
+                <button id="saveNoteBtn" class="btn btn-primary">Guardar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
