@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/28749700/README.md)
 # Gestor de Notas
 
 Aplicación web simple para crear y organizar notas dentro de carpetas.

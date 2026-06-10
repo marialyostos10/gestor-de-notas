@@ -65,8 +65,8 @@ function init() {
 
 // ==================== Gestión de Temas ====================
 function toggleTheme() {
-    document.documentElement.classList.toggle('dark-theme');
-    const isDarkTheme = document.documentElement.classList.contains('dark-theme');
+    document.body.classList.toggle('dark-theme');
+    const isDarkTheme = document.body.classList.contains('dark-theme');
     localStorage.setItem('theme', isDarkTheme ? 'dark' : 'light');
     updateThemeIcon();
 }
@@ -74,13 +74,13 @@ function toggleTheme() {
 function loadTheme() {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
-        document.documentElement.classList.add('dark-theme');
+        document.body.classList.add('dark-theme');
     }
     updateThemeIcon();
 }
 
 function updateThemeIcon() {
-    const isDark = document.documentElement.classList.contains('dark-theme');
+    const isDark = document.body.classList.contains('dark-theme');
     themeToggle.textContent = isDark ? '☀️' : '🌙';
 }
 
